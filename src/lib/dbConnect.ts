@@ -15,6 +15,9 @@ export default async function dbConnect(): Promise<void> {  // void means this f
     try {
         const db = await mongoose.connect(process.env.MONGODB_URI || '', {}) // options can be passed as second argument
         connection.isConected = db.connections[0].readyState
+        console.log(db);
+        console.log(db.connections);
+        
         console.log("DB Connected Successfully");
     } catch (error) {
         console.log("Database Connection Failed",error);

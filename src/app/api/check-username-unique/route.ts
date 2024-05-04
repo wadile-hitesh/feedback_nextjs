@@ -24,6 +24,9 @@ export async function GET(request:Request) {
     try{
         const {searchParams} = new URL(request.url)
 
+        console.log(searchParams);
+        
+
         const queryParam = {
             username : searchParams.get('username')
         }
@@ -70,8 +73,8 @@ export async function GET(request:Request) {
             success : false,
             message : "Error Checking Username"
         },
-    {
-        status : 500
-    })
+        {
+            status : 500
+        })
     }
 }

@@ -1,4 +1,4 @@
-    import {
+import {
     Html,
     Head,
     Font,
@@ -8,14 +8,14 @@
     Section,
     Text,
     Button,
-    } from "@react-email/components";
+} from "@react-email/components";
 
-    interface VerificationEmailProps {
+interface VerificationEmailProps {
     username: string;
     otp: string;
-    }
+}
 
-    export default function VerificationEmail({
+export default function VerificationEmail({
     username,
     otp,
     }: VerificationEmailProps) {
@@ -64,4 +64,4 @@
         </Section>
         </Html>
     );
-    }
+}

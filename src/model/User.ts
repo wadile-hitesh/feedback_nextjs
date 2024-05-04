@@ -1,6 +1,8 @@
 import mongoose, {Schema,Document, mongo} from "mongoose"
 
-export interface Message extends Document {
+// Document is Required To Add type Safety using Typescript
+
+export interface Message extends Document {  // This type safety will be use in mongoose document hence we externds document
     content : string,
     createdAt : Date
 }
@@ -23,10 +25,9 @@ export interface User extends Document {
     password: string;
     verifyCode: string;
     verifyCodeExpiry: Date;
-    isVerified: Boolean;
-    isAcceptingMessage: Boolean;
+    isVerified: boolean;
+    isAcceptingMessage: boolean;
     message: Message[];
-
 }
 
 const userSchema : Schema<User> = new Schema({
